@@ -43,7 +43,7 @@ body{
     display: flex;
     position: relative;
     cursor: grab;
-    transition: transform 0.75s ease-in;
+    transition: transform 1s ease-out;
 }
 .slide{
     position: relative;
