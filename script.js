@@ -149,6 +149,7 @@ const navigateEvent = (dotIndex) => {
     if (setNumber != dotIndex) {
         setNumber = dotIndex - 1;
         changeEventSet();
+        console.log(setNumber);
         // clearInterval(eventSetChangeInterval);
 
         // eventSetChangeInterval = setInterval(changeEventSet, 5000);
@@ -161,7 +162,7 @@ const changeEventSet = () => {
     const limit = numberOfSlides;
     if (setNumber < limit) {
         setNumber++;
-        slide.style.transform = "translate(" + (-100 * (setNumber - 1)) + "%";
+        carouselContainer.style.transform = "translate(" + (-100 * (setNumber - 1)) / (numberOfSlides) + "%)";
         for (dot of document.querySelectorAll('.nav-btn')) {
             dot.style.background = 'none';
         }
@@ -177,9 +178,9 @@ const changeEventSet = () => {
 window.onload = () => {
     addSlide();
     createDots();
-    // setTimeout(() => {
-    //     changeEventSet();
-    // }, 0.5);
+    setTimeout(() => {
+        changeEventSet();
+    }, 0.5);
     var id = 1;
     document.addEventListener('keydown', (e) => {
             if (e.keyCode == 39 && id != numberOfSlides) {

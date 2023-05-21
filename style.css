@@ -30,7 +30,7 @@
     --white: var(--white);
 }
 body{
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background-color: #262626;
 
 }
@@ -42,17 +42,15 @@ body{
     width: 500%;
     display: flex;
     position: relative;
-    overflow-x: auto;
     cursor: grab;
+    transition: transform 0.75s ease-in;
 }
 .slide{
     position: relative;
     height: 100%;
-    /* color: white; */
     font-size: 3rem;
     font-weight: 400;
     background-position: center;
-    transition: transform 0.75s ease-in;
 }
 .text1, .text2, .text3, .text4{
     font-size: 12.5rem;
@@ -127,5 +125,6 @@ body{
     height: 12px;
     width: 12px;
     border-radius: 50%;
+    cursor: pointer;
     border: 0.5px solid #898989;
   }
