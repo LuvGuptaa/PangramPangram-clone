@@ -57,22 +57,30 @@ body{
     line-height: 1.3 !important;
     position: absolute;
     padding-left: 1.25rem;
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: 1s;
 }
 .text1{
     top: 6%;
     left: 10%;
+    animation-delay: .1s !important;
 }
 .text2{
     top: 35%;
     left: 3%;
+    animation-delay: .2s !important;
 }
 .text3{
     top: 35%;
-    right: 5%;
+    right: 3%;
+    animation-delay: .3s !important;
+
 }
 .text4{
-    bottom: 9%;
+    bottom: 4%;
     left: 50%;
+    animation-delay: .5s !important;
 }
 .box{
     font-size: 1rem;
@@ -82,11 +90,19 @@ body{
     border-radius: .3125rem;
     min-width: 12.5rem;
     padding: 1.25rem;
+    padding-top: .75rem;
     width: 33.333%;
     position: absolute;
     bottom: 3.125rem;
     left: 2.5rem;
     cursor: pointer;
+}
+.box:hover{
+    background-color: #1c1c1c33;
+    border-color: #fff9;
+}
+.box:hover .box-arrow{
+    transform: translateX(10px);
 }
 .box-heading{
     font-size: 3rem;
@@ -109,7 +125,8 @@ body{
     font-weight: bold;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 10px;
+    transition: transform .6s cubic-bezier(.075,.82,.165,1);
 }
 .carousel-nav{
     position: absolute;
@@ -128,3 +145,48 @@ body{
     cursor: pointer;
     border: 0.5px solid #898989;
   }
+
+
+  @keyframes upward{
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes downward{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+@keyframes moveRight{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes moveLeft{
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}

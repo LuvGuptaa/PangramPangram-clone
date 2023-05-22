@@ -69,18 +69,17 @@ data = [
 ]
 
 const carouselContainer = document.querySelector('.carousel-container');
-const text1 = document.querySelector('.text1');
-const text2 = document.querySelector('.text2');
-const text3 = document.querySelector('.text3');
-const text4 = document.querySelector('.text4');
+
 const numberOfSlides = data.length;
+var text = [];
+var textStash = [];
 
 const addSlide = () => {
-    var text = [];
 
     data.forEach((item) => {
         slide = document.createElement('div');
         slide.className = "slide";
+        slide.id = item.id;
         slide.style.backgroundImage = `url(${item.bg})`;
         slide.style.width = 100/numberOfSlides + "%";
         slide.style.backgroundSize = "cover";
@@ -91,6 +90,7 @@ const addSlide = () => {
         for (let i = 1; i <= 4; i++) {
             text[i] = document.createElement('div');
             text[i].className = "text" + i;
+            text[i].id = slide.id;
             if (i===1) {
                 text[i].innerHTML = item.text1;
             } else if (i===2){
@@ -102,7 +102,8 @@ const addSlide = () => {
             else {
                 text[i].innerHTML = item.text4;
             }  
-            slide.appendChild(text[i])
+            slide.appendChild(text[i]);
+            textStash.push(text[i]);
         }
         box = document.createElement('div');
         box.className = "box";
@@ -149,7 +150,7 @@ const navigateEvent = (dotIndex) => {
     if (setNumber != dotIndex) {
         setNumber = dotIndex - 1;
         changeEventSet();
-        console.log(setNumber);
+        // console.log(dotIndex);
         // clearInterval(eventSetChangeInterval);
 
         // eventSetChangeInterval = setInterval(changeEventSet, 5000);
@@ -163,6 +164,30 @@ const changeEventSet = () => {
     if (setNumber < limit) {
         setNumber++;
         carouselContainer.style.transform = "translate(" + (-100 * (setNumber - 1)) / (numberOfSlides) + "%)";
+        
+        console.log(textStash)
+
+        if (setNumber) {
+            for (let i = 0; i <  20; i++) {
+                textStash[i].style.animation = 'downward 1s cubic-bezier(0, 0.52, 0.68, 1.42)';
+                textStash[i].style.opacity = '0';   
+            }
+
+            for (let i = ((setNumber - 1)*4); i < (setNumber*4); i++) {
+                textStash[i].style.animation = 'upward 1.5s cubic-bezier(.075,.82,.165,1) ';       
+                textStash[i].style.opacity = '1';   
+            }
+            
+        }
+        else{
+            for (let i = 0; i < 20; i++) {
+                textStash[i].style.animation = '';          
+            }
+        }
+
+        
+
+
         for (dot of document.querySelectorAll('.nav-btn')) {
             dot.style.background = 'none';
         }
