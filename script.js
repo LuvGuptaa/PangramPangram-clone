@@ -72,6 +72,7 @@ const carouselContainer = document.querySelector('.carousel-container');
 
 const numberOfSlides = data.length;
 var text = [];
+var boxStash = [];
 var textStash = [];
 
 const addSlide = () => {
@@ -127,11 +128,13 @@ const addSlide = () => {
         boxContent.appendChild(boxArrow);
 
         box.appendChild(boxContent);
-
+        
         slide.appendChild(box);
+        boxStash.push(box);
         
     })
 }
+
 
 const createDots = () => {
     const dotsContainer = document.querySelector('.carousel-nav');
@@ -144,6 +147,7 @@ const createDots = () => {
     }
     
 }
+
 let setNumber = 0;
 
 const navigateEvent = (dotIndex) => {
@@ -166,7 +170,7 @@ const changeEventSet = () => {
         carouselContainer.style.transform = "translate(" + (-100 * (setNumber - 1)) / (numberOfSlides) + "%)";
         
         console.log(textStash)
-
+        console.log(boxStash);
         if (setNumber) {
             for (let i = 0; i <  20; i++) {
                 textStash[i].style.animation = 'downward 1s cubic-bezier(0, 0.52, 0.68, 1.42)';
@@ -185,6 +189,23 @@ const changeEventSet = () => {
             }
         }
 
+        if (setNumber) {
+            for (let i = 0; i <  5; i++) {
+                boxStash[i].style.animation = 'moveLeft 1.5s cubic-bezier(.075,.82,.165,1)';
+                boxStash[i].style.opacity = '0';   
+            }
+
+            for (let i = ((setNumber - 1)); i < (setNumber); i++) {
+                boxStash[i].style.animation = 'moveRight 1.5s cubic-bezier(.075,.82,.165,1) ';       
+                boxStash[i].style.opacity = '1';   
+            }
+            
+        }
+        else{
+            for (let i = 0; i < 5; i++) {
+                boxStash[i].style.animation = '';          
+            }
+        }
         
 
 
