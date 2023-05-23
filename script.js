@@ -221,6 +221,23 @@ const changeEventSet = () => {
     }
 }
 
+let menu_switch = 0;
+const menu = () => {
+    if(menu_switch === 0) {
+        document.querySelector('.menu-box1').style.transform = 'translateY(0)';
+        document.querySelector('.menu-box1').style.transition = 'transform 1s ease-in-out';
+        menu_switch = 1;
+    }
+    else {
+        document.querySelector('.menu-box1').style.transform = 'translateY(-100%)';
+        document.querySelector('.menu-box1').style.transition = 'transform 1s ease-in-out';
+    }
+}
+
+document.querySelector('.menu-btn').addEventListener('click', () => menu());
+document.querySelector('.close').addEventListener('click', () => menu());
+
+
 window.onload = () => {
     addSlide();
     createDots();
@@ -242,4 +259,5 @@ window.onload = () => {
             else{}
         
     })
+  
 }
