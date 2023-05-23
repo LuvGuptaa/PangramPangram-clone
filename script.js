@@ -231,7 +231,9 @@ const menu = () => {
     else {
         document.querySelector('.menu-box1').style.transform = 'translateY(-100%)';
         document.querySelector('.menu-box1').style.transition = 'transform 1s ease-in-out';
+        menu_switch = 0;
     }
+    
 }
 
 document.querySelector('.menu-btn').addEventListener('click', () => menu());
