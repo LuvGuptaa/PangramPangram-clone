@@ -248,13 +248,13 @@ body{
     cursor: pointer;
 }
 .menu-btn{
+    position: relative;
     z-index: 30;
 }
 .line{
     width: 30px;
     height: 1px;
     background-color: white;
-    transition: 0.5s;
 }
 .line1{
     transform: translateY(4px);
@@ -276,21 +276,47 @@ body{
 
 .menu-box1{
     padding: 1.875rem 2.5rem 2.5rem 2.5rem;
-    z-index: 20;
+    z-index:  20;
     height: 65vh;
     box-shadow: 0 0 20px #6c6c6c8f;
     transform: translateY(-100%);
+    transition-delay: .15s;
+    /* display: none; */
 }
 
 .menu-right{
     width: 33.333%;
     position: absolute;
     right: 0;
+    height: 90%;
 }
 .close{
     margin-bottom: 2.1875rem;
     cursor: pointer;
+    display: inline-block;
     transition: opacity .6s cubic-bezier(.075,.82,.165,1)
+}
+.cross-btn{
+    position: absolute;
+    right: 2.5rem;
+    top: 1rem;
+    height: 30px;
+    width: 30px;
+}
+.cross-btn:hover{
+    cursor: pointer;
+}
+.cross{
+    width: 30px;
+    height: 1px;
+    background-color: black;
+}
+.cross-line1{
+    transform: rotate(-45deg)
+}
+.cross-line2{
+    /* transform: translateY(15px); */
+    transform: rotate(45deg);
 }
 .menu-box1-links{
     display: flex;
@@ -303,6 +329,12 @@ body{
     text-decoration: none;
     font-size: 1.375rem;
     font-weight: 550;
+}
+.close:hover{
+    opacity: .4;
+}
+.menu-box1-links a:hover{
+    opacity: .4;
 }
 .menu-left{
     position: absolute;
@@ -326,13 +358,74 @@ body{
     align-items: flex-end;
     position: absolute;
     bottom: 5%;
-    left: 3%;
+    left: 0%;
 }
 .pay-icons{
     width: 100%;
     margin-top: 4rem;
 }
-.pay-icons > svg{
+.pay-icons svg{
     height: 2.875rem;
     width: 5.75rem;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+    clip-path: circle(50%);
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.social-icons svg{
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+.menu-box2{
+    height: 80%;
+    display: flex;
+    align-items: flex-end;
+    z-index: 10;
+    transform: translateY(-100%);
+}
+.menu2-left{
+    width: 66.66%;
+    font-weight: 700;
+    font-size: 12.5rem;
+    line-height: 1;
+    padding-left: 2.5rem
+}
+.menu2-right{
+    width: 33.333%;
+
+}
+.box-2-nav-links{
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #1c1c1c;
+    padding-bottom: 3.25rem;
+    line-height: 1.5rem;
+}
+.box-2-nav-links a{
+    color: #1c1c1c;
+    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.box-2-nav-links a:hover{
+    opacity: .4;
+}
+.menu-nav-links-left{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.menu-nav-links-right{
+    display: flex;
+    flex-direction: column;
 }

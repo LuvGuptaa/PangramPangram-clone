@@ -224,13 +224,22 @@ const changeEventSet = () => {
 let menu_switch = 0;
 const menu = () => {
     if(menu_switch === 0) {
+        // document.querySelectorAll('.menu-btn').forEach(element => element.classList.add('open-menu'));
         document.querySelector('.menu-box1').style.transform = 'translateY(0)';
-        document.querySelector('.menu-box1').style.transition = 'transform 1s ease-in-out';
+        document.querySelector('.menu-box1').style.transition = 'transform 1.2s cubic-bezier(.075,.82,.165,1)';
+        document.querySelector('.menu-box1').style.transitionDelay = '0.15s';
+        document.querySelector('.carousel-navbar').style.display = 'none';
+        document.querySelector('.menu-box2').style.transform = 'translateY(0)';
+        document.querySelector('.menu-box2').style.transition = 'transform 1.2s cubic-bezier(.075,.82,.165,1)';
         menu_switch = 1;
     }
     else {
         document.querySelector('.menu-box1').style.transform = 'translateY(-100%)';
-        document.querySelector('.menu-box1').style.transition = 'transform 1s ease-in-out';
+        document.querySelector('.menu-box1').style.transition = 'transform 1.2s cubic-bezier(.075,.82,.165,1)';
+        document.querySelector('.carousel-navbar').style.display = 'flex';
+        document.querySelector('.menu-box2').style.transform = 'translateY(-100%)';
+        document.querySelector('.menu-box2').style.transition = 'transform 1.2s cubic-bezier(.075,.82,.165,1)';
+        document.querySelector('.menu-box2').style.transitionDelay = '0.15s';
         menu_switch = 0;
     }
     
@@ -238,7 +247,7 @@ const menu = () => {
 
 document.querySelector('.menu-btn').addEventListener('click', () => menu());
 document.querySelector('.close').addEventListener('click', () => menu());
-
+document.querySelector('.cross-btn').addEventListener('click', () => menu());
 
 window.onload = () => {
     addSlide();
