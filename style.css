@@ -33,6 +33,7 @@ body{
     overflow-x: hidden;
     background-color: #262626;
     font-family: 'neue';
+    color: white;
 }
 .container{
     height: 100vh;
@@ -50,7 +51,13 @@ body{
     height: 100%;
     font-size: 3rem;
     font-weight: 400;
+}
+.slide-bg{
+    height: 100%;
+    width: 20%;
     background-position: center;
+    position: fixed;
+    bottom: 0;
 }
 .text1, .text2, .text3, .text4{
     font-size: 12.5rem;
@@ -272,6 +279,7 @@ body{
     position: fixed;
     background-color: white;
     width: 100%;
+
 }
 
 .menu-box1{
@@ -428,4 +436,15 @@ body{
 .menu-nav-links-right{
     display: flex;
     flex-direction: column;
+}
+
+
+.about{
+    position: relative;
+    padding: 3% 3%;
+
+}
+.about-us{
+    border-top: 1px solid #666060;
+    margin-bottom: 4%;
 }

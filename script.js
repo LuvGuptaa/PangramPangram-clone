@@ -81,12 +81,20 @@ const addSlide = () => {
         slide = document.createElement('div');
         slide.className = "slide";
         slide.id = item.id;
-        slide.style.backgroundImage = `url(${item.bg})`;
+        
         slide.style.width = 100/numberOfSlides + "%";
-        slide.style.backgroundSize = "cover";
         slide.style.fontFamily = item.fontFamily;
         slide.style.color = item.fontColor;
         carouselContainer.appendChild(slide); 
+
+
+        slideBG = document.createElement('div');
+        slideBG.className = "slide-bg";
+        
+        slideBG.style.backgroundImage = `url(${item.bg})`;
+        slideBG.style.backgroundSize = "cover";
+        slide.appendChild(slideBG);
+
 
         for (let i = 1; i <= 4; i++) {
             text[i] = document.createElement('div');
@@ -245,9 +253,27 @@ const menu = () => {
     
 }
 
+let carousel_bg = document.querySelectorAll('.slide-bg');
+console.log(carousel_bg);
+let scrollTop = window.pageYOffset;
+
+const parallax = (scrollTop) => {
+    scrollTop = window.pageYOffset;
+
+    carousel_bg.forEach(element => {console.log(element)});
+    // console.log(scrollTop);
+}
+
+
+
 document.querySelector('.menu-btn').addEventListener('click', () => menu());
 document.querySelector('.close').addEventListener('click', () => menu());
 document.querySelector('.cross-btn').addEventListener('click', () => menu());
+
+
+window.addEventListener("scroll", () => {
+    parallax();
+})
 
 window.onload = () => {
     addSlide();
