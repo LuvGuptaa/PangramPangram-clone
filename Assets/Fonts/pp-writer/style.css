@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'writer';
+    font-style: normal;
+    font-weight: normal;
+    src: local('writer'), url('PPWriter-Ultralight.woff') format('woff');
+    }

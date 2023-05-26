@@ -3,7 +3,7 @@ data = [
     
     {
         "id": 1,
-        "bg": 'https://cdn.shopify.com/s/files/1/2642/6578/t/28/assets/Homepage-OffType.jpg?v=50217493341841142561684249811',
+        "bg": 'https://cdn.shopify.com/s/files/1/2642/6578/t/28/assets/Homepage-OffType.jpg?v=71331014463972640541684944315',
         "text1": 'Weirdly',
         "text2": 'Off',
         "text3": 'Beat',
@@ -116,6 +116,7 @@ const addSlide = () => {
         }
         box = document.createElement('div');
         box.className = "box";
+        box.style.color = "white";
 
         boxHeading = document.createElement('div');
         boxHeading.className = "box-heading";
@@ -271,6 +272,31 @@ document.querySelector('.close').addEventListener('click', () => menu());
 document.querySelector('.cross-btn').addEventListener('click', () => menu());
 
 
+const underline_out = (id) => {
+    document.querySelectorAll('.underline').forEach(element => element.classList.remove('und_link_out'));
+    document.querySelector(`.underline-${id}`).classList.add('und_link_in');
+}
+
+const underline_in = (id) => {
+    document.querySelectorAll('.underline').forEach(element => element.classList.remove('und_link_in'));
+    document.querySelector(`.underline-${id}`).classList.add('und_link_out');
+}
+
+document.querySelector('.about-div-2-link').addEventListener('mouseover', () => underline_in(1))
+document.querySelector('.about-div-2-link').addEventListener('mouseout', () => underline_out(1))
+
+document.querySelector('.about-div-3-link').addEventListener('mouseover', () => underline_in(2))
+document.querySelector('.about-div-3-link').addEventListener('mouseout', () => underline_out(2))
+
+// document.querySelector('.und_3').addEventListener('mouseover', () => underline_in(3))
+// document.querySelector('.und_3').addEventListener('mouseout', () => underline_out(3))
+
+// document.querySelector('.und_4').addEventListener('mouseover', () => underline_in(4))
+// document.querySelector('.und_4').addEventListener('mouseout', () => underline_out(4))
+
+// document.querySelector('.und_5').addEventListener('mouseover', () => underline_in(5))
+// document.querySelector('.und_5').addEventListener('mouseout', () => underline_out(5))
+
 window.addEventListener("scroll", () => {
     parallax();
 })
@@ -298,3 +324,35 @@ window.onload = () => {
     })
   
 }
+
+
+window.addEventListener('scroll', () => {
+    let val = window.scrollY
+    // console.log(val);
+    // document.querySelector('.sc').innerHTML = val
+    if (val > 1104) {
+        //1104-2090
+        let slope1 = (180 - 0) / (1104 - 2090);
+        let slope2 = (60 - 0) / (1104 - 2090);
+        let slope3 = (150 - 0) / (1104 - 2090);
+        /*
+        y-y1
+        ----  =  slope => y=slope*(val-y1)+x1
+        x-x1
+        */
+        document.querySelector('.Cards-row-2').style.marginTop = `${slope1 * (val - 1104) * 1.6 + 180}px`;
+        document.querySelector('.Cards-row-3').style.marginTop = `${slope2 * (val - 1104) * 1.6 + 60}px`;
+        document.querySelector('.Cards-row-4').style.marginTop = `${slope3 * (val - 1104) * 1.6 + 150}px`;
+    }
+    else {
+        document.querySelector('.Cards-row-2').style.marginTop = `${180}px`;
+        document.querySelector('.Cards-row-3').style.marginTop = `${60}px`;
+        document.querySelector('.Cards-row-4').style.marginTop = `${150}px`;
+    }
+    if (val % 100 < 50) {
+        document.querySelector('.circle').style.transform = 'rotate(5deg)';
+    }
+    else{
+        document.querySelector('.circle').style.transform = 'rotate(-5deg)';
+    }
+})

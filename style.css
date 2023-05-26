@@ -31,7 +31,7 @@
 }
 body{
     overflow-x: hidden;
-    background-color: #262626;
+    background-color: #1c1c1c;
     font-family: 'neue';
     color: white;
 }
@@ -57,7 +57,7 @@ body{
     width: 20%;
     background-position: center;
     position: fixed;
-    bottom: 0;
+    top: 0;
 }
 .text1, .text2, .text3, .text4{
     font-size: 12.5rem;
@@ -447,4 +447,295 @@ body{
 .about-us{
     border-top: 1px solid #666060;
     margin-bottom: 4%;
+    padding-top: 2%;
+}
+.about-title{
+    font-size: .8rem;
+}
+.about-p{
+    width: 80%;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.about-content{
+    width: 100%;
+    margin-top: 20vh;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.about-content > div{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-div-3-body p{
+    width: 80%;
+}
+
+/* 2 hyper-links */
+.about-link{
+    width: 100%;
+    border-bottom: 1px solid #666060;
+}
+
+.about-link a{
+    font-size: 1.2rem;
+    position: relative;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+}
+
+.underline{
+    height: 1px;
+    transition: transform .5s cubic-bezier(0.59, 0.72, 0.44, 1.01);
+    background-color: white;
+    transform: scaleX(0);
+}
+
+.und_link_in{
+    transform-origin: center right;
+    transform: scaleX(0);
+}
+
+.und_link_out{
+    transform-origin: center left;
+    transform: scaleX(1);
+}
+.about-empty{
+    height: 25vh;
+}
+
+
+.font-family{
+    color: white;
+    position: relative;
+    padding: 0 3%;
+    margin-bottom: 25vh;
+
+}
+.font-head{
+    padding-bottom: 1%;
+    border-bottom: 1px solid #666060;
+    margin-bottom: 3%;
+}
+
+
+
+.CardsContainer {
+    position: relative;
+    z-index: 1;
+    color: white;
+    background-color: #1c1c1c;
+}
+
+.Card {
+    height: 400px;
+    margin: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 4px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;/*here*/
+    background-color: #1c1c1c;
+}
+
+.Card>div {
+    width: 100%;
+}
+
+.Card-ele-1 {
+    text-align: left;
+    font-size: 130px;
+    padding: 20px;
+}
+
+.Card-ele-2 {
+    display: flex;
+    /* margin: auto 20px 20px 20px; */
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.Card-ele-2-2 {
+    font-size: 1.5rem;
+    margin-left: 4.5rem;
+    transition: transform .25s ease-in-out;
+}
+.Card:hover .Card-ele-2-2 {
+    transform: translateX(5px);
+}
+
+.Card-overlay {
+    position: absolute;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    z-index: 2;/*here*/
+    color: rgb(31, 31, 31);
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.Card-overlay img {
+    /* display: none;
+     */
+     visibility: hidden;
+    float: right;
+    padding: 5px;
+    margin: 15px;
+    height: 2.525rem;
+    width: 2.525rem;
+    transform: scale(0);
+    border-radius: 50%;
+    background-color: rgb(215, 215, 215);
+    transition: transform .6s cubic-bezier(.075,.82,.165,1);
+}
+.Card.Card:hover .Card-overlay img{
+    transform: scale(1);
+    visibility: visible;
+}
+
+.card-ribbon {
+    width: 100%;
+    height: 25px;
+    background-color: rgb(215, 215, 215);
+    transform: rotate(45deg) translate(90px, -50px);
+    color: black;
+    background-color: rgb(194, 194, 194);
+    text-align: center;
+    z-index: -1;/*here*/
+}
+
+.overlay-ele-1 {
+    line-height: 1;
+    margin: 20px 20px 60px 20px;
+    font-size: 2.3rem;
+}
+.editorial{
+    font-family: 'EditorialOld-Light';
+}
+.fragment{
+    font-family: 'PP Fragment Glare Light Italic';
+}
+.didone{
+    font-family: 'didone';
+}
+.serif{
+    font-family: 'serif';
+}
+.slab{
+    font-family: 'slab';
+}
+.acma{
+    font-family: 'acma';
+}
+.writer{
+    font-family: 'writer';
+    font-weight: 600;
+}
+.telegraf{
+    font-family: 'telegraf';
+}
+.neue-machina{
+    font-family: 'neue-machina';
+}
+.mori{
+    font-family: 'mori';
+}
+.sans{
+    font-family: 'sans';
+}
+
+
+
+.Card:hover {
+    color: black;
+}
+
+.Card:hover .Card-overlay {
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* .Card:hover img {
+    display: initial;
+} */
+
+.Card-overlay:hover {
+    z-index: 1;/*here*/
+}
+
+.CardsContainer {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.Cards-row {
+    flex: 1;
+}
+
+.Cards-row-1 {
+    margin-top: 0px;
+}
+
+.Cards-row-2 {
+    margin-top: 180px;
+}
+
+.Cards-row-3 {
+    margin-top: 60px;
+}
+
+.Cards-row-4 {
+    margin-top: 150px;
+}
+
+
+.circle {
+    color: black;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 1.5s cubic-bezier(.075,.82,.165,1);
+}
+
+.circle:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.circle>span {
+    text-align: center;
+}
+
+.circle-two {
+    font-weight: 300;
+    font-size: 38px;
 }
