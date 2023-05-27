@@ -288,14 +288,18 @@ document.querySelector('.about-div-2-link').addEventListener('mouseout', () => u
 document.querySelector('.about-div-3-link').addEventListener('mouseover', () => underline_in(2))
 document.querySelector('.about-div-3-link').addEventListener('mouseout', () => underline_out(2))
 
-// document.querySelector('.und_3').addEventListener('mouseover', () => underline_in(3))
-// document.querySelector('.und_3').addEventListener('mouseout', () => underline_out(3))
+document.querySelector('.see-fonts').addEventListener('mouseover', () => underline_in(3))
+document.querySelector('.see-fonts').addEventListener('mouseout', () => underline_out(3))
 
-// document.querySelector('.und_4').addEventListener('mouseover', () => underline_in(4))
-// document.querySelector('.und_4').addEventListener('mouseout', () => underline_out(4))
 
-// document.querySelector('.und_5').addEventListener('mouseover', () => underline_in(5))
-// document.querySelector('.und_5').addEventListener('mouseout', () => underline_out(5))
+document.querySelector('.und_3').addEventListener('mouseover', () => underline_in(3))
+document.querySelector('.und_3').addEventListener('mouseout', () => underline_out(3))
+
+document.querySelector('.und_4').addEventListener('mouseover', () => underline_in(4))
+document.querySelector('.und_4').addEventListener('mouseout', () => underline_out(4))
+
+document.querySelector('.und_5').addEventListener('mouseover', () => underline_in(5))
+document.querySelector('.und_5').addEventListener('mouseout', () => underline_out(5))
 
 window.addEventListener("scroll", () => {
     parallax();
@@ -356,3 +360,69 @@ window.addEventListener('scroll', () => {
         document.querySelector('.circle').style.transform = 'rotate(-5deg)';
     }
 })
+
+let height = Math.round(window.innerHeight);
+let width = Math.round(window.innerWidth);
+
+
+
+
+const project1Img=document.querySelector("#project1-img")
+const project2Img=document.querySelector("#project2-img")
+const project3Img=document.querySelector("#project3-img")
+const project4Img=document.querySelector("#project4-img")
+const project5Img=document.querySelector("#project5-img")
+
+window.addEventListener('scroll',()=>{
+ if(window.scrollY > 4.5*height){
+   let offsetTop2=window.scrollY - 4.2*height;
+
+   let project1ImgRate=offsetTop2*0.095;
+   let project2ImgRate=offsetTop2*0.095;
+   let project3ImgRate=offsetTop2*0.095;
+   let project4ImgRate=offsetTop2*0.095;
+   let project5ImgRate=offsetTop2*0.095;
+
+   project1Img.style.transform= `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${project1ImgRate}, 0, 1)`
+   project2Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${project2ImgRate}, 0, 1)`
+   project3Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${project3ImgRate}, 0, 1)`
+   project4Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${project4ImgRate}, 0, 1)`
+   project5Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${project5ImgRate}, 0, 1)`
+ }
+
+})
+
+
+const article1Img=document.querySelector("#article1-img")
+const article2Img=document.querySelector("#article2-img")
+const article3Img=document.querySelector("#article3-img")
+
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 4.5*height){
+      
+    let offsetTop3=window.scrollY - 6*height;
+
+    let article1ImgRate=offsetTop3*0.11;
+   let article2ImgRate=offsetTop3*0.11;
+   let article3ImgRate=offsetTop3*0.11;
+
+   article1Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${article1ImgRate}, 0, 1)`
+   article2Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${article2ImgRate}, 0, 1)`
+   article3Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${article3ImgRate}, 0, 1)`
+  }
+  
+  
+
+})
+
+const lastPage=document.querySelector("#lastPage")
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 4.7*height && window.scrollY < 11.7*height){
+    
+    let offsetTop4=window.scrollY- 6.6*height
+    let lastPageRate=offsetTop4*0.2
+    lastPage.style.transform=`translate3d(0px, ${lastPageRate}px, 0px)`
+  }
+})
+
+
