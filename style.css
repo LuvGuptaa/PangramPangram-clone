@@ -442,7 +442,7 @@ body{
 
 .about{
     position: relative;
-    padding: 3% 3%;
+    padding: 0 3%;
 
 }
 .about-us{
@@ -479,7 +479,6 @@ body{
     width: 80%;
 }
 
-/* 2 hyper-links */
 .about-link{
     width: 100%;
     border-bottom: 1px solid #666060;
@@ -1194,16 +1193,12 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    /* height: 30vh; */
+    height: 30vh;
     
   }
   #section-2-text{
     font-size: 10rem;
-    font-family: fantasy;
     color: rgb(36, 36, 36);
-    display: flex;
-    flex-direction: column;
-    
    
   }
   #section-2-icons > svg{
@@ -1215,7 +1210,6 @@ body{
   .divider-6{
     width:100%;
     height: 1px;
-  
     background-color: black;
     /* margin-bottom: 0.5rem; */
     position: relative;

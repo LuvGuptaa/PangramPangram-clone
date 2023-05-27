@@ -426,3 +426,29 @@ window.addEventListener('scroll',()=>{
 })
 
 
+let font = document.querySelector('#section-2-text');
+let editorial = document.querySelector('#editorial');
+let acma = document.querySelector('#acma');
+let mori = document.querySelector('#mori');
+let rightGothic = document.querySelector('#right-gothic');
+let neueMontreal = document.querySelector('#neue-montreal');
+let pangramSans = document.querySelector('#pangram-sans');
+let pangramSansRounded = document.querySelector('#pangram-sans-rounded');
+let charlevoix = document.querySelector('#charlevoix');
+let stellarSans = document.querySelector('#stellar-sans');
+let fujiSans = document.querySelector('#fuji-sans');
+let casaStencil = document.querySelector('#casa-stencil');
+
+
+
+
+
+editorial.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'editorial';
+})
+acma.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'acma';
+})
+mori.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'mori';
+})
