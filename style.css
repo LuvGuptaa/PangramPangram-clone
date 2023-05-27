@@ -24,10 +24,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 :root{
     --black: var(--black);
     --white: var(--white);
+}
+html{
+  scroll-snap-type: y proximity;
+}
+section{
+  scroll-snap-align: start;
 }
 body{
     overflow-x: hidden;
@@ -58,7 +65,7 @@ body{
     width: 20%;
     background-position: center;
     position: fixed;
-    top: 0;
+    
 }
 .text1, .text2, .text3, .text4{
     font-size: 12.5rem;
@@ -300,6 +307,7 @@ body{
     height: 90%;
 }
 .close{
+  color: #1c1c1c;
     margin-bottom: 2.1875rem;
     cursor: pointer;
     display: inline-block;

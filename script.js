@@ -261,8 +261,9 @@ let scrollTop = window.pageYOffset;
 const parallax = (scrollTop) => {
     scrollTop = window.pageYOffset;
 
-    carousel_bg.forEach(element => {console.log(element)});
+    // carousel_bg.forEach(element => {console.log(element)});
     // console.log(scrollTop);
+    // bg_img.forEach(element => {element.style.opacity = `${1 - scrolltop*0.0012}`});
 }
 
 
