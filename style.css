@@ -1247,7 +1247,9 @@ body{
     gap:0.8rem;
     cursor: pointer;
   }
-  
+  #sec3-column1 > div{
+    display: inline;
+  }
   #section-4-icons{
     width:60%;
     display: flex;

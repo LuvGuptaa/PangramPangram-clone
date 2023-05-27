@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'fuji';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fuji'), url('PPFuji-Medium.woff') format('woff');
+    }

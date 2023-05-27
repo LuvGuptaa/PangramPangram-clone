@@ -427,19 +427,24 @@ window.addEventListener('scroll',()=>{
 
 
 let font = document.querySelector('#section-2-text');
-let editorial = document.querySelector('#editorial');
-let acma = document.querySelector('#acma');
-let mori = document.querySelector('#mori');
-let rightGothic = document.querySelector('#right-gothic');
-let neueMontreal = document.querySelector('#neue-montreal');
-let pangramSans = document.querySelector('#pangram-sans');
-let pangramSansRounded = document.querySelector('#pangram-sans-rounded');
-let charlevoix = document.querySelector('#charlevoix');
-let stellarSans = document.querySelector('#stellar-sans');
-let fujiSans = document.querySelector('#fuji-sans');
-let casaStencil = document.querySelector('#casa-stencil');
-
-
+let editorial = document.querySelector('.f-editorial');
+let acma = document.querySelector('.f-acma');
+let mori = document.querySelector('.f-mori');
+let rightGothic = document.querySelector('.f-right-gothic');
+let neueMontreal = document.querySelector('.f-neue-montreal');
+let pangramSans = document.querySelector('.f-pangram-sans');
+let pangramSansRounded = document.querySelector('.f-pangram-sans-rounded');
+let charlevoix = document.querySelector('.f-charlevoix-pro');
+let stellarSans = document.querySelector('.f-stellar-sans');
+let fujiSans = document.querySelector('.f-fuji-sans');
+let casaStencil = document.querySelector('.f-casa-stencil');
+let bitmap = document.querySelector('.f-bitmap');
+let didone = document.querySelector('.f-didone');
+let writer = document.querySelector('.f-writer');
+let telegraf = document.querySelector('.f-telegraf');
+let neue = document.querySelector('.f-neue');
+let serif = document.querySelector('.f-serif');
+let fragment = document.querySelector('.f-fragment');
 
 
 
@@ -452,3 +457,48 @@ acma.addEventListener('mouseover', () => {
 mori.addEventListener('mouseover', () => {
     font.style.fontFamily = 'mori';
 })
+rightGothic.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'right-gothic';
+})
+neueMontreal.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'neue-montreal';
+})
+pangramSans.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'sans';
+})
+pangramSansRounded.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'sans-rounded';
+})
+charlevoix.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'charlevoix';
+})
+bitmap.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'bitmap';
+})
+
+didone.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'didone';
+})
+writer.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'writer';
+})
+telegraf.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'telegraf';
+})
+neue.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'neue';
+})
+fujiSans.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'fuji';
+})
+casaStencil.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'casa';
+})
+serif.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'serif';
+})
+fragment.addEventListener('mouseover', () => {
+    font.style.fontFamily = 'fragmen.f-';
+})
+
+
