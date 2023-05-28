@@ -257,9 +257,16 @@ const menu = () => {
 let carousel_bg = document.querySelectorAll('.slide-bg');
 console.log(carousel_bg);
 let scrollTop = window.pageYOffset;
-
+let fix_nav = document.querySelector('.fixed-navbar');
 const parallax = (scrollTop) => {
     scrollTop = window.pageYOffset;
+
+    if(scrollTop < 900 || scrollTop > 5650) {
+        fix_nav.style.transform = `translateY(-100%)`;
+    }
+    else{
+        fix_nav.style.transform = `translateY(0)`;
+    }
 
     // carousel_bg.forEach(element => {console.log(element)});
     // console.log(scrollTop);
@@ -271,6 +278,32 @@ const parallax = (scrollTop) => {
 document.querySelector('.menu-btn').addEventListener('click', () => menu());
 document.querySelector('.close').addEventListener('click', () => menu());
 document.querySelector('.cross-btn').addEventListener('click', () => menu());
+document.querySelector('.fixed-nav-btn').addEventListener('click', () => menu());
+
+
+let mode = 1
+let root = document.querySelector(':root');
+let light = document.querySelector('.light')
+
+const change_mode = () => {
+    if(mode === 1) {
+        light.innerHTML = '●&nbsp;Dark Mode'
+        root.style.setProperty('--black', 'white');
+        root.style.setProperty('--white', '#1c1c1c');
+        mode = 0;
+    }
+
+    else{
+        light.innerHTML = '●&nbsp;Light Mode'
+        root.style.setProperty('--white', 'white')
+        root.style.setProperty('--black', '#1c1c1c')
+        mode = 1;
+    }
+}
+
+document.querySelector('.mode').addEventListener('click', () => change_mode())
+
+
 
 
 const underline_out = (id) => {

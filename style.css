@@ -27,20 +27,25 @@
     scroll-behavior: smooth;
 }
 :root{
-    --black: var(--black);
-    --white: var(--white);
+    --black: #1c1c1c;
+    --white: white;
 }
-html{
+/* html{
   scroll-snap-type: y proximity;
 }
 section{
   scroll-snap-align: start;
-}
+} */
+
+
+
+
+
 body{
     overflow-x: hidden;
-    background-color: #1c1c1c;
+    background-color: var(--black);
     font-family: 'neue';
-    color: white;
+    color: var(--white);
     scroll-behavior: smooth;
 }
 .container{
@@ -113,7 +118,7 @@ body{
     cursor: pointer;
 }
 .box:hover{
-    background-color: #1c1c1c33;
+    background-color: var(--black);
     border-color: #fff9;
 }
 .box:hover .box-arrow{
@@ -160,7 +165,23 @@ body{
     cursor: pointer;
     border: 0.5px solid #898989;
   }
-
+.fixed-navbar{
+    padding: 1.875rem 2.5rem;
+    width: 100%;
+    background: var(--black);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    /* cursor: grab;  */
+    font-weight: 500;
+    transition: .3s ease-in-out;
+    /* transform: translateY(-100%); */
+}
+.mode{
+  cursor: pointer;
+}
 
   @keyframes upward{
     from{
@@ -216,7 +237,7 @@ body{
 }
 .scroll a{
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 .carousel-navbar{
     padding: 1.875rem 2.5rem;
@@ -253,23 +274,33 @@ body{
     width: 33.333%;
     display: flex;
     justify-content: space-between;
-    color: #ffffff;
+    color: var(--white);
 }
 .nav-right a{
     text-decoration: none;
-    color: #ffffff;     
+    color: white;     
+}
+.fixed-nav-right a {
+  color: var(--white);
 }
 .menu-btn:hover{
     cursor: pointer;
 }
-.menu-btn{
+.menu-btn {
     position: relative;
     z-index: 30;
+}
+.fixed-nav-btn{
+    position: relative;
+    z-index: 40;
+}
+.fixed-nav-btn:hover{
+  cursor: pointer;
 }
 .line{
     width: 30px;
     height: 1px;
-    background-color: white;
+    background-color: var(--white);
 }
 .line1{
     transform: translateY(4px);
@@ -326,7 +357,7 @@ body{
 .cross{
     width: 30px;
     height: 1px;
-    background-color: black;
+    background-color: #1c1c1c;
 }
 .cross-line1{
     transform: rotate(-45deg)
@@ -391,7 +422,7 @@ body{
     height: 20px;
     clip-path: circle(50%);
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid var(--black);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -422,12 +453,12 @@ body{
     display: flex;
     justify-content: flex-start;
     text-decoration: none;
-    color: #1c1c1c;
+    color: var(--black);
     padding-bottom: 2.25rem;
     line-height: 1.5rem;
 }
 .box-2-nav-links a{
-    color: #1c1c1c;
+    color: var(--black);
     transition: opacity .6s cubic-bezier(.075,.82,.165,1);
     text-decoration: none;
     font-size: 1rem;
@@ -495,7 +526,7 @@ body{
 .about-link a{
     font-size: 1.2rem;
     position: relative;
-    color: white;
+    color: var(--white);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -506,7 +537,7 @@ body{
 .underline{
     height: 1px;
     transition: transform .5s cubic-bezier(0.59, 0.72, 0.44, 1.01);
-    background-color: white;
+    background-color: var(--white);
     transform: scaleX(0);
 }
 
@@ -525,7 +556,7 @@ body{
 
 
 .font-family{
-    color: white;
+    color: var(--white);
     position: relative;
     padding: 0 3%;
     margin-bottom: 15vh;
@@ -542,23 +573,23 @@ body{
 .CardsContainer {
     position: relative;
     z-index: 1;
-    color: white;
-    background-color: #1c1c1c;
+    color: var(--white);
+    background-color: var(--black);
 }
 
 .Card {
     height: 400px;
     margin: 15px;
     cursor: pointer;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     border-radius: 4px;
     overflow: hidden;
-    color: white;
+    color: var(--white);
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;/*here*/
-    background-color: #1c1c1c;
+    background-color: var(--black);
 }
 
 .Card>div {
@@ -593,7 +624,7 @@ body{
     top: 50%;
     left: 50%;
     z-index: 2;/*here*/
-    color: rgb(31, 31, 31);
+    color: var(--black);
     height: 0;
     width: 0;
     overflow: hidden;
@@ -623,7 +654,7 @@ body{
     height: 25px;
     background-color: rgb(215, 215, 215);
     transform: rotate(45deg) translate(90px, -50px);
-    color: black;
+    color: var(--black);
     background-color: rgb(194, 194, 194);
     text-align: center;
     z-index: -1;/*here*/
@@ -672,11 +703,11 @@ body{
 
 
 .Card:hover {
-    color: black;
+    color: var(--black);
 }
 
 .Card:hover .Card-overlay {
-    background-color: whitesmoke;
+    background-color: var(--white);
     height: 100%;
     width: 100%;
     top: 0;
@@ -719,14 +750,14 @@ body{
 
 
 .circle {
-    color: black;
+    color: var(--black);
     text-align: center;
     height: 350px;
     width: 350px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--white);
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -735,8 +766,8 @@ body{
 
 .circle:hover {
     cursor: pointer;
-    color: gray;
-}
+    opacity: .78;
+  }
 
 .circle>span {
     text-align: center;
@@ -760,7 +791,7 @@ body{
 }
 .see-fonts a{
     text-decoration: none;
-    color: white;
+    color: var(--white);
     font-size: 1.375rem;
     line-height: 1.2;
 }
@@ -787,7 +818,7 @@ body{
 #fourthPage{
     width: 100%;
     padding: 0 3%;
-    color: white;
+    color: var(--white);
     margin: 0.5rem 0;
   }
   #fontInUse{
@@ -1249,7 +1280,7 @@ body{
   }
   #section-3 > div{
     width:25%;
-    height:50vh;
+    height:20vh;
     display: flex;
     flex-direction: column;
     gap:0.8rem;
