@@ -69,6 +69,7 @@ data = [
 ]
 
 const carouselContainer = document.querySelector('.carousel-container');
+const bgImages = document.querySelector('.bg-images');
 
 const numberOfSlides = data.length;
 var text = [];
@@ -93,7 +94,7 @@ const addSlide = () => {
         
         slideBG.style.backgroundImage = `url(${item.bg})`;
         slideBG.style.backgroundSize = "cover";
-        slide.appendChild(slideBG);
+        bgImages.appendChild(slideBG);
 
 
         for (let i = 1; i <= 4; i++) {
@@ -177,7 +178,7 @@ const changeEventSet = () => {
     if (setNumber < limit) {
         setNumber++;
         carouselContainer.style.transform = "translate(" + (-100 * (setNumber - 1)) / (numberOfSlides) + "%)";
-        
+        bgImages.style.transform = "translate(" + (-100 * (setNumber - 1)) / (numberOfSlides) + "%)";
         console.log(textStash)
         console.log(boxStash);
         if (setNumber) {
@@ -253,9 +254,6 @@ const menu = () => {
     }
     
 }
-
-let carousel_bg = document.querySelectorAll('.slide-bg');
-console.log(carousel_bg);
 let scrollTop = window.pageYOffset;
 let fix_nav = document.querySelector('.fixed-navbar');
 const parallax = (scrollTop) => {
@@ -268,9 +266,9 @@ const parallax = (scrollTop) => {
         fix_nav.style.transform = `translateY(0)`;
     }
 
-    // carousel_bg.forEach(element => {console.log(element)});
+    // bgImages.forEach(element => {console.log(element)});
     // console.log(scrollTop);
-    // bg_img.forEach(element => {element.style.opacity = `${1 - scrolltop*0.0012}`});
+    bgImages.style.opacity = `${1 - scrollTop*0.0012}`;
 }
 
 

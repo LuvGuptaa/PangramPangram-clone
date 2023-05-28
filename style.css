@@ -1,24 +1,4 @@
 
-@font-face {
-        font-display: block;
-        font-family: Roboto;
-        src: url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-        }
-
-@font-face {
-        font-display: fallback;
-        font-family: Roboto;
-        font-weight: 600;
-        src: url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-        }
-
-@font-face {
-        font-display: fallback;
-        font-family: Roboto;
-        font-weight: 700;
-        src: url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-        }
-
 
 *{
     margin: 0;
@@ -50,6 +30,16 @@ body{
 }
 .container{
     height: 100vh;
+    position: relative;
+}
+.bg-images{
+  position: fixed;
+  height: 100%;
+  width: 500%;
+  top: 0;
+  display: flex;
+  z-index: -1;
+  transition: transform 1s ease-out;
 }
 .carousel-container{
     height: 100%;
@@ -67,9 +57,9 @@ body{
 }
 .slide-bg{
     height: 100%;
-    width: 20%;
+    width: 100%;
     background-position: center;
-    position: fixed;
+    /* position: fixed; */
     
 }
 .text1, .text2, .text3, .text4{
@@ -166,7 +156,7 @@ body{
     border: 0.5px solid #898989;
   }
 .fixed-navbar{
-    padding: 1.875rem 2.5rem;
+    padding: .95rem 2.5rem;
     width: 100%;
     background: var(--black);
     position: fixed;
@@ -175,9 +165,12 @@ body{
     display: flex;
     justify-content: space-between;
     /* cursor: grab;  */
-    font-weight: 500;
+    font-weight: 400;
     transition: .3s ease-in-out;
     transform: translateY(-100%);
+}
+.fixed-nav-left{
+  width: 13% !important;
 }
 .mode{
   cursor: pointer;
@@ -1169,7 +1162,7 @@ body{
   margin-top: 15rem;
 }
 #last-page-empty{
-  height: 20vh;
+  height: 35vh;
   border: none;
 }
   
