@@ -400,8 +400,11 @@ body{
     padding: 10% 5% 5% 5% !important;
   }
 
-  #section-2{
+  #section-2-text{
     display: none !important;
+  }
+  #section-2{
+    height: 10vh !important;
   }
   .divider-6{
     display: none !important;
