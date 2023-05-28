@@ -108,7 +108,7 @@ body{
     cursor: pointer;
 }
 .box:hover{
-    background-color: var(--black);
+    /* background-color: var(--black); */
     border-color: #fff9;
 }
 .box:hover .box-arrow{
@@ -149,8 +149,8 @@ body{
     right: 22%;
 }
 .nav-btn{
-    height: 12px;
-    width: 12px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
     cursor: pointer;
     border: 0.5px solid #898989;
@@ -170,7 +170,7 @@ body{
     transform: translateY(-100%);
 }
 .fixed-nav-left{
-  width: 13% !important;
+  width: 5% !important;
 }
 .mode{
   cursor: pointer;
@@ -279,12 +279,78 @@ body{
 .fixed-nav-right{
   color: var(--white);
 }
+
+@media(max-width: 940px){
+  
+  .nav-right{
+    width: 3%;
+  }
+  .nav-right a{
+    display: none;
+  }
+  .text1, .text2, .text3, .text4{
+    font-size: 6rem;
+    left: 0;
+  }
+  .text1{
+    top: 22vh;
+  }
+  .text3{
+    left: 20vh;
+  }
+
+  .text4{
+    bottom: 38vh;
+  }
+  
+
+  .box{
+    width: 93%;
+    left: 3%;
+    margin-bottom: 2rem;
+  }
+
+  .box-heading{
+    display: none;
+    
+  }
+  .carousel-nav{
+    left: 4%;
+  }
+  .menu2-left{
+    display: none;
+  }
+  .menu-left{
+    display: none;
+  }
+  .menu-right{
+    width: 100% !important;
+    position: relative !important;
+  }
+  .menu2-right{
+    width: 100% !important;
+    padding-left: 2rem;
+  }
+  .cross-btn{
+    right: 0 !important;
+  }
+}
+
+
+
+
+
+
+
+
+
 .menu-btn:hover{
     cursor: pointer;
 }
 .menu-btn {
     position: relative;
     z-index: 30;
+    height: 30px;
 }
 .fixed-nav-btn{
     position: relative;
