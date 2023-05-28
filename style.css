@@ -282,6 +282,7 @@ body{
 
 @media(max-width: 940px){
   
+  
   .nav-right{
     width: 3%;
   }
@@ -352,6 +353,79 @@ body{
     padding-top: 10%;
     padding-bottom: 20%;
   }
+  .und_3, .und_4, .und_5{
+    width: 90% !important;
+  }
+  #projectText{
+    font-size: 1.75rem !important;
+    width: 100% !important;
+    float: left !important;
+  }
+  #projects{
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  #projects > div {
+    height: 50vh !important;
+  }
+  #project2-img-container{
+    margin-top: 0rem !important;
+    height: 100% !important;
+  }
+  #project3-img-container{
+    margin-top: 0rem !important;
+    height: 100% !important;
+  }
+  #project4-img-container{
+    margin-top: 0rem !important;
+    height: 100% !important;
+  }
+  #project5-img-container{
+    margin-top: 0rem !important;
+    height: 100% !important;
+  }
+  .see-fonts{
+    margin-top: 5rem;
+  }
+
+  #articles{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #last-page-empty{
+    height: 0 !important;
+  }
+  #lastPage{
+    padding: 10% 5% 5% 5% !important;
+  }
+
+  #section-2{
+    display: none !important;
+  }
+  .divider-6{
+    display: none !important;
+
+  }
+  #section-3{
+    display: none !important;
+  }
+  #section-1{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #column-1{
+    width: 100% !important;
+  }
+  #column-2, #column-3{
+    margin-top: 15%;
+  }
+
+  #section-4-icons{
+    width: 120% !important;
+    margin-left: -1rem !important;
+  }
+
 }
 
 
@@ -810,10 +884,13 @@ body{
     display: flex;
     padding: 1rem;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .Cards-row {
     flex: 1;
+    max-width: 350px;
+    min-width: 300px;
 }
 
 .Cards-row-1 {

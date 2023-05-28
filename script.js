@@ -264,10 +264,16 @@ let text4 = document.querySelector('.text4');
 console.log(text1);
 
 
+
+
+
+
+
+
 const parallax = (scrollTop) => {
     scrollTop = window.pageYOffset;
 
-    if(scrollTop < 700 || scrollTop > 5650) {
+    if(scrollTop < 700 ) {
         fix_nav.style.transform = `translateY(-100%)`;
     }
     else{
@@ -286,6 +292,7 @@ const parallax = (scrollTop) => {
     // text4.style.transform = `translateY(calc(${-scrollTop * 0.15}px))`;
 
     bgImages.style.opacity = `${1 - scrollTop*0.0015}`;
+    
 }
 
 
@@ -427,10 +434,10 @@ window.addEventListener('scroll',()=>{
    let offsetTop2=window.scrollY - 4.2*height;
 
    let project1ImgRate=offsetTop2*0.095;
-   let project2ImgRate=offsetTop2*0.095;
-   let project3ImgRate=offsetTop2*0.095;
-   let project4ImgRate=offsetTop2*0.095;
-   let project5ImgRate=offsetTop2*0.095;
+   let project2ImgRate=offsetTop2*0.055;
+   let project3ImgRate=offsetTop2*0.085;
+   let project4ImgRate=offsetTop2*0.045;
+   let project5ImgRate=offsetTop2*0.025;
 
    project1Img.style.transform= `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${project1ImgRate}, 0, 1)`
    project2Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${project2ImgRate}, 0, 1)`
@@ -451,9 +458,9 @@ window.addEventListener('scroll',()=>{
       
     let offsetTop3=window.scrollY - 6*height;
 
-    let article1ImgRate=offsetTop3*0.11;
-   let article2ImgRate=offsetTop3*0.11;
-   let article3ImgRate=offsetTop3*0.11;
+    let article1ImgRate=offsetTop3*0.031;
+   let article2ImgRate=offsetTop3*0.031;
+   let article3ImgRate=offsetTop3*0.031;
 
    article1Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${article1ImgRate}, 0, 1)`
    article2Img.style.transform=`matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${article2ImgRate}, 0, 1)`
