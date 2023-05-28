@@ -38,7 +38,7 @@ body{
   width: 500%;
   top: 0;
   display: flex;
-  z-index: -1;
+  z-index: -1000;
   transition: transform 1s ease-out;
 }
 .carousel-container{
