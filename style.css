@@ -177,7 +177,7 @@ body{
     /* cursor: grab;  */
     font-weight: 500;
     transition: .3s ease-in-out;
-    /* transform: translateY(-100%); */
+    transform: translateY(-100%);
 }
 .mode{
   cursor: pointer;
@@ -274,13 +274,16 @@ body{
     width: 33.333%;
     display: flex;
     justify-content: space-between;
-    color: var(--white);
+    color: white;
 }
 .nav-right a{
     text-decoration: none;
     color: white;     
 }
 .fixed-nav-right a {
+  color: var(--white);
+}
+.fixed-nav-right{
   color: var(--white);
 }
 .menu-btn:hover{
@@ -300,7 +303,10 @@ body{
 .line{
     width: 30px;
     height: 1px;
-    background-color: var(--white);
+    background-color: white;
+}
+.fixed-line{
+  background-color: var(--white);
 }
 .line1{
     transform: translateY(4px);
@@ -443,7 +449,8 @@ body{
     font-weight: 700;
     font-size: 12.5rem;
     line-height: 1;
-    padding-left: 2.5rem
+    padding-left: 2.5rem;
+    color: #1c1c1c;
 }
 .menu2-right{
     width: 33.333%;
@@ -458,7 +465,7 @@ body{
     line-height: 1.5rem;
 }
 .box-2-nav-links a{
-    color: var(--black);
+    color: #1c1c1c;
     transition: opacity .6s cubic-bezier(.075,.82,.165,1);
     text-decoration: none;
     font-size: 1rem;
