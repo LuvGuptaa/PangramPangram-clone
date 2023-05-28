@@ -334,6 +334,24 @@ body{
   .cross-btn{
     right: 0 !important;
   }
+  .about-p{
+    font-size: 1.75rem !important;
+    float: right;
+    width: 100% !important;
+  }
+  .about-content{
+    flex-direction: column-reverse !important;
+    /* margin-top: 40vh !important; */
+    height: auto !important;
+  }
+  .about-content > div {
+    width: 100% !important;
+    padding: 5% 0;
+  }
+  .about-div-3-body{
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
 }
 
 
