@@ -256,19 +256,36 @@ const menu = () => {
 }
 let scrollTop = window.pageYOffset;
 let fix_nav = document.querySelector('.fixed-navbar');
+let text1 = document.querySelector('.text1');
+let text2 = document.querySelector('.text2');
+let text3 = document.querySelector('.text3');
+let text4 = document.querySelector('.text4');
+
+console.log(text1);
+
+
 const parallax = (scrollTop) => {
     scrollTop = window.pageYOffset;
 
-    if(scrollTop < 900 || scrollTop > 5650) {
+    if(scrollTop < 700 || scrollTop > 5650) {
         fix_nav.style.transform = `translateY(-100%)`;
     }
     else{
         fix_nav.style.transform = `translateY(0)`;
     }
 
+
+    textStash.forEach(element => {element.style.transform = `translateY(calc(${-scrollTop * 0.45}px))`});
+
+
     // bgImages.forEach(element => {console.log(element)});
-    // console.log(scrollTop);
-    bgImages.style.opacity = `${1 - scrollTop*0.0012}`;
+    // console.log(scrollTop);\
+    // text1.style.transform = `translateY(calc(${-scrollTop * 0.15}px))`;
+    // text2.style.transform = `translateY(calc(${-scrollTop * 0.15}px))`;
+    // text3.style.transform = `translateY(calc(${-scrollTop * 0.15}px))`;
+    // text4.style.transform = `translateY(calc(${-scrollTop * 0.15}px))`;
+
+    bgImages.style.opacity = `${1 - scrollTop*0.0015}`;
 }
 
 
